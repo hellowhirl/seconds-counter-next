@@ -1,7 +1,6 @@
-import Head from "next/head";
 import styles from "../page.module.css";
 
-export interface MessageAreaProps {
+interface MessageAreaProps {
   goalTime: number;
   timeDifference: number | null;
   isRunning: boolean;
