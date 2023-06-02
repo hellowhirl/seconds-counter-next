@@ -2,15 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap");
 @import url("https://fonts.cdnfonts.com/css/chalkboard");
 
-/* html {
-  background-color: #f5f5f5;
-} */
-
-/* body {
-  background-color: #f5f5f5;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-} */
-
 .App {
   margin-top: 20px;
 }
@@ -30,9 +21,9 @@
   border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.settingsButton:last-child {
+/* .settingsButton:last-child {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
+} */
 
 .gameInstructions {
   width: 220px;
