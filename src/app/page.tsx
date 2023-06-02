@@ -9,7 +9,8 @@ import TimerArea from "./components/TimerArea";
 import Options from "./components/Options";
 import Records from "./components/Records";
 import AdContainer from "./components/AdContainer";
-import AboutPage from "./components/AboutPage";
+import AboutPage from "./about/page";
+import Link from "next/link";
 
 type GameState = {
   timeElapsed: number;
@@ -164,11 +165,10 @@ const HomePage: React.FC = () => {
           setShowMessageArea={setShowMessageArea}
         />
       )}
-      <AdContainer />
-      <div className={styles.options}>
+      <div className={styles.settingsButtonsContainer}>
         {showSettingsButtons && (
-          <button
-            className={styles.optionButton}
+          <div
+            className={styles.settingsButton}
             onClick={() => {
               setShowOptions(true);
               setShowTimer(false);
@@ -177,13 +177,11 @@ const HomePage: React.FC = () => {
             }}
           >
             Options
-          </button>
+          </div>
         )}
-      </div>
-      <div className={styles.records}>
         {showSettingsButtons && (
-          <button
-            className={styles.optionButton}
+          <div
+            className={styles.settingsButton}
             onClick={() => {
               setShowRecords(true);
               setShowTimer(false);
@@ -192,9 +190,13 @@ const HomePage: React.FC = () => {
             }}
           >
             Records
-          </button>
+          </div>
         )}
+        <Link href="/about" className={styles.settingsButton}>
+          About
+        </Link>
       </div>
+      <AdContainer />
     </div>
   );
 };

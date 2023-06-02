@@ -1,8 +1,9 @@
+import AdContainer from "../components/AdContainer";
 import styles from "../page.module.css";
 
 const AboutPage: React.FC = () => {
   return (
-    <div>
+    <div className={styles.gameContainer}>
       <p>
         Welcome to the Timer Challenge! This game is designed to test your
         timing and precision skills.{" "}
@@ -21,6 +22,7 @@ const AboutPage: React.FC = () => {
         Are you up for the challenge? Start the timer and see how well you can
         master the art of perfect timing!
       </p>
+      <AdContainer />
     </div>
   );
 };
