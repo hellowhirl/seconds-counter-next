@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { Children, useState } from "react";
 import styles from "../page.module.css";
 import create from "zustand";
 import MessageArea from "./MessageArea";
@@ -8,6 +8,7 @@ import TimerArea from "./TimerArea";
 import Options from "./Options";
 import Records from "./Records";
 import AdContainer from "./AdContainer";
+import Link from "next/link";
 
 type GameState = {
   timeElapsed: number;
@@ -188,6 +189,11 @@ const Game: React.FC = () => {
           >
             Records
           </div>
+        )}
+        {showSettingsButtons && (
+          <Link href="/about" className={styles.settingsButton}>
+            About
+          </Link>
         )}
       </div>
       <AdContainer />

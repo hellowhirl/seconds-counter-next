@@ -8,9 +8,6 @@ const MainPage: React.FC = () => {
   return (
     <div className={styles.gameContainer}>
       <Game />
-      <Link href="/about" className={styles.settingsButton}>
-        About
-      </Link>
     </div>
   );
 };
