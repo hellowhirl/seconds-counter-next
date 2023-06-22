@@ -14,7 +14,8 @@ const MessageArea: React.FC<MessageAreaProps> = ({
   return (
     <div className={styles.topArea}>
       <h1 className={styles.gameInstructions}>
-        Press STOP when the timer reaches {goalTime / 1000} seconds!
+        Press <b>STOP</b> when the timer reaches{" "}
+        <b>{goalTime / 1000} seconds!</b>
       </h1>
       {!isRunning && (
         <div className={styles.messageArea}>
